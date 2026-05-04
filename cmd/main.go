@@ -13,6 +13,7 @@ func main() {
 	serv := server.NewServer(logg)
 
 	err := serv.HTTP.ListenAndServe()
+
 	if err != nil {
 		logg.Fatal(err)
 	}
