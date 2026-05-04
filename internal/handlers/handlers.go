@@ -11,7 +11,7 @@ import (
 )
 
 func MainHandle(res http.ResponseWriter, req *http.Request) {
-	data, err := os.ReadFile("index.html")
+	data, err := os.ReadFile("../index.html")
 
 	if err != nil {
 		http.Error(res, err.Error(), http.StatusInternalServerError)
@@ -31,7 +31,7 @@ func UploadHandle(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	file, handle, err := req.FormFile("file")
+	file, handle, err := req.FormFile("myFile")
 
 	if err != nil {
 		http.Error(res, err.Error(), http.StatusInternalServerError)
