@@ -11,7 +11,7 @@ import (
 )
 
 func MainHandle(res http.ResponseWriter, req *http.Request) {
-	data, err := os.ReadFile("../index.html")
+	data, err := os.ReadFile("github.com/Yandex-Practicum/go1fl-sprint6-final/index.html")
 
 	if err != nil {
 		http.Error(res, err.Error(), http.StatusInternalServerError)
