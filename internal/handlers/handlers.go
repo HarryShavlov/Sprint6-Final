@@ -18,7 +18,7 @@ func MainHandle(res http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	res.Header().Set("Content-Type", "text/plain")
+	res.Header().Set("Content-Type", "text/html")
 	res.Write(data)
 }
 
